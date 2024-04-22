@@ -12,7 +12,7 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     for _ in range(n):
         if len(new_list) >= n:
             break
-        t = await wait_random(max_delay)
-        new_list.append(t)
+        delay = await wait_random(max_delay)
+        new_list.append(delay)
 
     return sorted(new_list)
