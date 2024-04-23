@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 """Coroutine that collect 10 random numbers."""
-
-
 import asyncio
 import random
 from typing import List
