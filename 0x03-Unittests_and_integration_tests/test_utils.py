@@ -24,8 +24,12 @@ class TestAccessNestedMap(unittest.TestCase):
         ({}, ("a",), KeyError),
         ({"a": 1}, ("a", "b"), KeyError)
     ])
-    def test_access_nested_map(self, nested_map: Dict[str, Any],
-                               path: Tuple[str], expected_result: Any):
+    def test_access_nested_map(
+        self,
+        nested_map: Dict[str, Any],
+        path: Tuple[str],
+        expected_result: Any
+    ) -> None:
         """assertRaises test for utils.access_nested_map."""
         with self.assertRaises(expected_result):
             access_nested_map(nested_map, path)
