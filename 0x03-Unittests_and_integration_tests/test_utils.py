@@ -28,7 +28,7 @@ class TestAccessNestedMap(unittest.TestCase):
         self,
         nested_map: Dict[str, Any],
         path: Tuple[str],
-        expected_result: Any
+        expected_result
     ) -> None:
         """assertRaises test for utils.access_nested_map."""
         with self.assertRaises(expected_result):
