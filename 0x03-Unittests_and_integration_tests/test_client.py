@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Test class GithubOrgClient."""
+"""Test case for class GithubOrgClient."""
 from unittest.mock import patch, Mock, PropertyMock
 from parameterized import parameterized
 import unittest
