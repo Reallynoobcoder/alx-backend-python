@@ -1,9 +1,8 @@
-#!/usr/bin/env python3
-"""Parameterize a unit test."""
 from unittest.mock import patch, Mock, PropertyMock
-from parameterized import parameterized, parameterized_class
+from parameterized import parameterized
 import unittest
 from client import GithubOrgClient
+from typing import Any, Dict
 
 
 class TestGithubOrgClient(unittest.TestCase):
@@ -14,7 +13,7 @@ class TestGithubOrgClient(unittest.TestCase):
         ("abc",),
     ])
     @patch('client.get_json')
-    def test_org(self, org_name, mock_get_json):
+    def test_org(self, org_name: str, mock_get_json: Mock) -> None:
         """Test org method of GithubOrgClient"""
         client = GithubOrgClient(org_name)
 
