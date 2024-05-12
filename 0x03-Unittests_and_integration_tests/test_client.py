@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Test class GithubOrgClient."""
 from unittest.mock import patch, Mock, PropertyMock
 from parameterized import parameterized
 import unittest
@@ -7,7 +8,7 @@ from typing import Any, Dict
 
 
 class TestGithubOrgClient(unittest.TestCase):
-    """Defines a test case class for testing GithubOrgClient"""
+    """Test case class for testing GithubOrgClient"""
 
     @parameterized.expand([
         ("google",),
@@ -15,7 +16,7 @@ class TestGithubOrgClient(unittest.TestCase):
     ])
     @patch('client.get_json')
     def test_org(self, org_name: str, mock_get_json: Mock) -> None:
-        """Test org method of GithubOrgClient"""
+        """Test org method of GithubOrgClient."""
         client = GithubOrgClient(org_name)
 
         mock_get_json.return_value = {
